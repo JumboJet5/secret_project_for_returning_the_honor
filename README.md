@@ -17,3 +17,8 @@ or
 ``
 npm run build
 ``
+
+### To deploy app
+``
+npm run deploy
+``
