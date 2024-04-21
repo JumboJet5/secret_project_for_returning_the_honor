@@ -8,6 +8,7 @@
   ],
   "license": "",
   "author": "",
+  "homepage": "https://jumbojet5.github.io/secret_project_for_returning_the_honor/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.config.dev.js",
