@@ -1,5 +1,5 @@
 {
-  "name": " ",
+  "name": "secret_project_for_returning_the_honor",
   "version": "0.0.1",
   "description": "",
   "private": true,
@@ -15,6 +15,9 @@
     "build": "webpack --config webpack.config.prod.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "rxjs": "~7.8.1"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
