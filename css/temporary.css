@@ -1,17 +1,55 @@
 #container {
+  --harvester-size: 40px;
+  --value-block-width: 100px;
+  --value-block-height: 20px;
+
   position: relative;
   width: 100%;
   height: 100px;
   border: 2px solid black;
+  padding: 0 calc(var(--harvester-size) / 2);
 }
 
-#pointer {
+#garden-area {
   position: absolute;
-  --x: 50%;
-  left: clamp(0px, var(--x), calc(100% - 40px));
-  bottom: 0;
+  left: calc(var(--value-block-width) / 2);
+  right: calc(var(--value-block-width) / 2);
+  top: 0;
+  bottom: var(--value-block-height);
+}
 
-  width: 40px;
+#harvest-area {
+  position: absolute;
+  left: calc(var(--harvester-size) / 2);
+  right: calc(var(--harvester-size) / 2);
+  height: 100%;
+}
+
+#harvester {
+  --x: 50%;
+
+  position: absolute;
+  width: var(--harvester-size);
   height: 20px;
+  left: clamp(0px, var(--x), 100%);
+  bottom: 0;
+  transform: translateX(calc(-1 * var(--harvester-size) / 2));
+  z-index: 100;
+
   background-color: red;
+}
+
+.value-block {
+  --x: 50%;
+  --y: 0px;
+  position: absolute;
+  width: var(--value-block-width);
+  height: var(--value-block-height);
+  left: clamp(0px, var(--x), 100%);
+  top: var(--y);
+  transform: translateX(calc(-1 * var(--value-block-width) / 2));
+  z-index: 10;
+
+  background-color: blue;
+  border: 1px solid green;
 }
